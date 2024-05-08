@@ -1,0 +1,31 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  namespace: scr
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/affinity: cookie
+    nginx.ingress.kubernetes.io/rewrite-target: /${sas-scr-published-name}/$2
+    nginx.ingress.kubernetes.io/session-cookie-name: sas-scr-ingress-nginx
+    nginx.ingress.kubernetes.io/session-cookie-path: /${sas-scr-published-name}/
+    nginx.ingress.kubernetes.io/session-cookie-samesite: Lax
+    component-name: sas-scr-${sas-scr-published-name}
+  labels:
+    app: sas-scr-${sas-scr-published-name}
+  name: sas-scr-${sas-scr-published-name}
+spec:
+  rules:
+  - host: d80830.sukeob-mar24-gcp-nginx-b38a3554.unx.sas.com
+    http:
+      paths:
+      - backend:
+          service: 
+             name: sas-scr-${sas-scr-published-name}
+             port: 
+                number: 443
+        path: /${sas-scr-published-name}(/|$)(.*)
+        pathType: Prefix
+  tls:
+  - hosts:
+    - d80830.sukeob-mar24-gcp-nginx-b38a3554.unx.sas.com
+    secretName: scr-ingress-cert
