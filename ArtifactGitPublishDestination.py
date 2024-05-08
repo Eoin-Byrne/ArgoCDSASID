@@ -78,7 +78,7 @@ clientSecret = """{
   }"""
 
 gitUserId="Eoin-Byrne"
-gitAccessToken=""
+gitAccessToken="1234"
 
 encoded_clientID = str(base64.b64encode(clientID.encode("utf-8")), "utf-8")
 encoded_clientSecret = str(base64.b64encode(clientSecret.encode("utf-8")), "utf-8")
