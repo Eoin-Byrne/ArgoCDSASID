@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/Eoin-Byrne/SCRImages.git
+    repoURL: https://github.com/yourname/your-repo.git
     targetRevision: HEAD
     path: apps
     directory: 
