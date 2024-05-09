@@ -1,11 +1,9 @@
-With the SAS Container Runtime (SCR) feature, SAS Intelligent Decisioning users can deploy decisions as lightweight containers. But how do you deploy these containers for testing or production use?
+With the SAS Container Runtime (SCR) feature, SAS Intelligent Decisioning users can deploy decisions as lightweight containers.
+A common question is how do you deploy these containers for testing or production use? When SAS customers move to the cloud they expect to use industry-standard, CI/CD,  tools for this purpose.
+Deployment methods can be manual, semi-automatic, or fully automatic.
 
-As customers move to the cloud, many expect to use industry-standard CI/CD tools for this purpose. There are several methods: manual, semi-automatic, and fully automatic. 
-In a my blog, Keeping in sync.  Using SAS Intelligent decisioning and ArgoCD to automatically deploy SCRs.
+In my blog post, I explore a fully automatic approach for deploying an SCR using SAS Intelligent Decisioning, GitHub, Argo CD, and Kubernetes.
 
-LINK TO BLOG
+This repo contains the code and script samples referenced in that blog
 
-I explore a fully automatic approach for deploying an SCR using SAS Intelligent Decisioning , GitHub, Argo CD, and Kubernetes.
-
-This repo contains the code and script samples referanced in that blog
-
+Link to blog -> 
