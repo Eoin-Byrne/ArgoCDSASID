@@ -27,5 +27,5 @@ spec:
         pathType: Prefix
   tls:
   - hosts:
-    - d80830.sukeob-mar24-gcp-nginx-b38a3554.unx.sas.com
+    - d83119.sukeob-may24-gcp-nginx-7b2b9219.unx.sas.com
     secretName: scr-ingress-cert
