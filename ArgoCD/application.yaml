@@ -1,23 +1,23 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: myapp-argo-application
+  name: auto-auction-recursive
   namespace: argocd
 spec:
   project: default
-
   source:
-    repoURL:https://github.com/Eoin-Byrne/ArgoCD_Ex.git
+    repoURL: https://github.com/yourname/your-repo.git
     targetRevision: HEAD
-    path: dev
+    path: apps
+    directory: 
+       recurse: true
+       include: '*/deployment/*.yaml'
   destination: 
     server: https://kubernetes.default.svc
-    namespace: myapp
-
+    namespace: scr
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
-
     automated:
       selfHeal: true
       prune: true
